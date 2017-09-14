@@ -11,3 +11,4 @@ alert(3+
 2);
 
 [1,2].forEach(alert)
+
