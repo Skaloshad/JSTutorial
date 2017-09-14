@@ -6,14 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <p>first p</p>
+  <p>befre loading js</p>
   
-  <script>
-    alert("first rabbit");
-    alert("second rabbit");
-    alert("third rabbit");
-  </script>
+  <script src="js/bigJS.js"></script>
+  <script src="js/averageJS.js"></script>
+  <script src="js/smallJS.js"></script>
   
-  <p>second p</p>
+  <p>after loading js</p>
+  
+  <p>befre loading js</p>
+  
+  <script src="js/bigJS.js" async></script>
+  <script src="js/smallJS.js" defer></script>
+  <script src="js/averageJS.js" defer></script>
+  
+  <p>after loading js</p>
+
 </body>
 </html>
