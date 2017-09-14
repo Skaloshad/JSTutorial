@@ -1,0 +1,1 @@
+https://learn.javascript.ru/bitwise-operators#проверка-на-1

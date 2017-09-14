@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Binary</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    var dex = parseInt('11000', 2);
+    alert(dex);
+    
+    var binary = dex.toString(2);
+    alert(binary);
+    
+    //Побитовое сложение
+    var a = parseInt('1000', 2);
+    var b = parseInt('1110', 2);
+    var res = a & b;
+    alert("a = " + a.toString(2) + 
+            "\nb = " + b.toString(2) + 
+            "\nres = " + res.toString(2));
+  </script>
+</head>
+<body>
+</body>
+</html>
