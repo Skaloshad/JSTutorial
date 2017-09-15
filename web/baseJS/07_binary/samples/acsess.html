@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Acsess</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    
+    var ACCESS_ADMIN = 1;
+    var ACCESS_GOODS_EDIT = 2;
+    var ACCESS_GOODS_VIEW = 4;
+    var ACCESS_ARTICLE_EDIT = 8;
+    var ACCESS_ARTICLE_VIEW = 16;
+    
+    var guest = ACCESS_ARTICLE_VIEW | ACCESS_GOODS_VIEW;
+    var editor = guest | ACCESS_ARTICLE_EDIT | ACCESS_GOODS_EDIT;
+    var admin = editor | ACCESS_ADMIN;
+    
+    alert("editor ACCESS_ADMIN check: " + (editor & ACCESS_ADMIN));
+    alert("editor ACCESS_GOODS_EDIT check: " + (editor & ACCESS_GOODS_EDIT));
+    
+    var check = ACCESS_GOODS_EDIT | ACCESS_ARTICLE_EDIT;
+    alert("guest ACCESS_GOODS_EDIT or ACCESS_ARTICLE_EDIT check: " + (guest & check));
+    
+  </script>
+</head>
+<body>
+</body>
+</html>
