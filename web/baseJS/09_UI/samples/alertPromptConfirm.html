@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Interaction</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    
+    alert('Пример alert()');
+    
+    var resp = prompt('Пример prompt()', 'Значение по умолчанию');
+    if(resp === null || resp === ''){resp = 'Вы отменили ввод';}
+    alert('Вы ввели: ' + resp);
+    
+    var conf = confirm('Ты говоришь мне: ');
+    if(conf){
+      alert('Оооо да');
+    }else{
+      alert('Нет нет нет');
+    }
+    
+  </script>
+</head>
+<body>
+</body>
+</html>
