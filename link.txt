@@ -1,1 +1,1 @@
-https://learn.javascript.ru/ifelse
+https://learn.javascript.ru/types-conversion
