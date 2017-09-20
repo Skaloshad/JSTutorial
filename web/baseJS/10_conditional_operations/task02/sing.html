@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Используя конструкцию if..else, напишите код, который получает значение prompt, а затем выводит alert:
+
+    1, если значение больше нуля,
+    -1, если значение меньше нуля,
+    0, если значение равно нулю.
+
+-->
+<html>
+  <head>
+    <title>Sing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function sing(){
+        var input = prompt('Введите число','');
+        
+        if(input == null){
+          alert('Вы отменили ввод!!');
+        }else if(input == ''){
+          alert('Введите число!!!');
+        }else{
+          if(input > 0){
+            alert(1);
+          }else if(input < 0){
+            alert(-1);
+          }else{
+            alert(0);
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick='sing()'>sing</button>
+  </body>
+</html>

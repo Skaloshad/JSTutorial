@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Перепишите if..else с использованием нескольких операторов '?'.
+
+Для читаемости – оформляйте код в несколько строк.
+
+var message;
+
+if (login == 'Вася') {
+  message = 'Привет';
+} else if (login == 'Директор') {
+  message = 'Здравствуйте';
+} else if (login == '') {
+  message = 'Нет логина';
+} else {
+  message = '';
+}
+-->
+<html>
+<head>
+  <title>if else short</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function ifElseShort(){
+      var login = prompt('Введите логин','');
+      var message = (login == 'Вася') ? 'Привет':
+              (login == 'Директор') ? 'Здравствуйте':
+              (login == '') ? 'Нет логина':
+              '';
+      alert(message);
+    }
+  </script>
+</head>
+<body>
+  <button onclick='ifElseShort()'>ifElseShort</button>
+</body>
+</html>

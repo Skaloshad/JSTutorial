@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>if else</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    
+    var userinput = prompt('В каком году распался СССР?');
+    if(userinput === null || userinput === '') {
+      alert('Вы отменили ввод');
+    }else{
+      if(userinput !== '1991') {alert('Нет!!!');}
+      else {alert('Правильно!!!');}
+    }
+    
+    var comp = (userinput !== '1991');
+    if(comp) {alert('Работает');}
+    else {alert('Работает!');}
+    
+    // ?
+    
+    var sample;
+    var age = prompt('Ваш возраст');
+    if(age < 1){
+      sample = 'Неверный возраст';
+    }else if(age < 18){
+      sample = 'Вам нельзя куить';
+    }else{
+      sample = 'Вы совершеннолетний';
+    }
+    alert(sample);
+    
+    var sample1;
+    var age = prompt('Ваш возраст');
+    sample1 = (age < 1) ? 'Неверный возраст': 
+            (age < 18) ?  'Вам нельзя курить':
+                          'Вы совершеннолетний';
+    alert(sample1);
+    
+  </script>
+</head>
+<body>
+</body>
+</html>

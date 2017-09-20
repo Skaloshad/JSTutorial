@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Перепишите if с использованием оператора '?':
+
+if (a + b < 4) {
+  result = 'Мало';
+} else {
+  result = 'Много';
+}
+-->
+<html>
+<head>
+  <title>if ->> ?</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function ifShort(){
+      var a = 1;
+      var b = 2;
+      var result = (a + b < 4) ? 'Мало':'Много';
+      alert(result);
+    }
+  </script>
+</head>
+<body>
+  <button onclick='ifShort()'>ifShort</button>
+</body>
+</html>

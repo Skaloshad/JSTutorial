@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+Используя конструкцию if..else, напишите код, который будет спрашивать: «Каково «официальное» название JavaScript?».
+
+Если посетитель вводит «ECMAScript», то выводить «Верно!», если что-то другое – выводить «Не знаете? «ECMAScript»!».
+-->
+<html>
+<head>
+  <title>Task</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    
+    var uInp = prompt('Каково «официальное» название JavaScript?','');
+    if(uInp === null){
+      alert('Вы отменили ввод!!!');
+    }else{
+      if(uInp === 'ECMAScript'){
+        alert('Верно!');
+      }else{
+        alert('Не знаете? «ECMAScript»!');
+      }
+    }
+    
+  </script>
+</head>
+<body>
+</body>
+</html>
