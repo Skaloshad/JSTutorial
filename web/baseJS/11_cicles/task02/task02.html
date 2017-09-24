@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+Перепишите код, заменив цикл for на while, без изменения поведения цикла.
+
+for (var i = 0; i < 3; i++) {
+  alert( "номер " + i + "!" );
+}
+-->
+<html>
+<head>
+  <title>task02</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function for_while(){
+      var i = 0;
+      while(i < 3){
+        alert("Номер " + i + "!");
+        i++;
+      }
+    }
+    
+    function for_while_old(){
+      for (var i = 0; i < 3; i++) {
+        alert( "номер " + i + "!" );
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="for_while()">for_while</button>
+  <button onclick="for_while_old()">for_while_old</button>
+</body>
+</html>
