@@ -1,1 +1,1 @@
-https://learn.javascript.ru/recursion
+https://learn.javascript.ru/named-function-expression
