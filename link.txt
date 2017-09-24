@@ -1,1 +1,1 @@
-https://learn.javascript.ru/types-conversion
+https://learn.javascript.ru/function-declaration-expression

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, 
+умножает x на себя n раз и возвращает результат.
+
+pow(3, 2) = 3 * 3 = 9
+pow(3, 3) = 3 * 3 * 3 = 27
+pow(1, 100) = 1 * 1 * ...*1 = 1
+
+Создайте страницу, которая запрашивает x и n, а затем выводит 
+результат pow(x,n).
+
+P.S. В этой задаче функция обязана поддерживать только натуральные 
+значения n, т.е. целые от 1 и выше.
+-->
+<html>
+<head>
+  <title>Pow function</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function pow(x,n){
+      var res = x;
+      for (var i = 0; i < n-1; i++){
+        res = res * x;
+      }
+      return res;
+    }
+    
+    function showAnswer(){
+      var x = prompt('Введите значение x ', '0');
+      var n = prompt('Введите значение n ', '0');
+      
+      alert('x ^ n = ' + pow(x,n));
+    }
+  </script>
+</head>
+<body>
+  <button onclick="showAnswer()">pow</button>
+</body>
+</html>
