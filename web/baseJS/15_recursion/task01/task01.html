@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Напишите функцию sumTo(n), которая для данного n вычисляет сумму 
+чисел от 1 до n, например:
+
+sumTo(1) = 1
+sumTo(2) = 2 + 1 = 3
+sumTo(3) = 3 + 2 + 1 = 6
+sumTo(4) = 4 + 3 + 2 + 1 = 10
+...
+sumTo(100) = 100 + 99 + ... + 2 + 1 = 5050
+
+Сделайте три варианта решения:
+
+    С использованием цикла.
+    Через рекурсию, т.к. sumTo(n) = n + sumTo(n-1) для n > 1.
+    С использованием формулы для суммы арифметической прогрессии.
+
+Пример работы вашей функции:
+
+function sumTo(n) { /*... ваш код ... */ }
+
+alert( sumTo(100) ); // 5050
+
+Какой вариант решения самый быстрый? Самый медленный? Почему?
+
+Можно ли при помощи рекурсии посчитать sumTo(100000)? Если нет, то почему?
+-->
+<html>
+<head>
+  <title>Task 01</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function sumToSycle(n){
+      var result = 0;
+      for(var i = 1; i <= n; i++){
+        result += i;
+      }
+      return result;
+    }
+    function sumToRecurs(n){
+      if(n > 1){
+        return n + sumToRecurs(n-1);
+      }else{
+        return n;
+      }
+    }
+    function sumToFormul(n){
+      var a1 = 1;
+      var an = n;
+      
+      var result = (a1 + an)/2*n;
+      return result;
+    }
+  </script>
+</head>
+<body>
+  <button onclick="alert(sumToSycle(100))">sumToCycle</button>
+  <button onclick="alert(sumToRecurs(100))">sumToRecurs</button>
+  <button onclick="alert(sumToFormul(100))">sumToFormul</button>
+</body>
+</html>

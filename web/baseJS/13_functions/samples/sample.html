@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Functions samples</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    
+    function showMessage(){
+      alert('Привет из функции');
+    }
+    
+    function showFormattedMessage(from, text){
+      if (text === undefined){
+        text = 'Текст не передан';
+      }
+      from = '**' + from + '**';
+      alert( from + ': ' + text);
+    }
+    
+    function oneParameterTest(form, text){
+      text = text || 'Тест не передан';
+      form = '**' + form + '**';
+      alert( form + ': ' + text);
+    }
+    
+    function renurnTest(a, b, c){
+      return b*b - 4*a*c;
+    }
+    
+  </script>
+</head>
+<body>
+  <button onclick="showMessage()">showMessage</button>
+  <button onclick="showFormattedMessage('Маша', 'Привет')">showFormattedMessage</button>
+  <button onclick="oneParameterTest('Леша')">oneParameterTest</button>
+  <button onclick="alert(renurnTest(-4, 2, 1))">return</button>
+</body>
+</html>

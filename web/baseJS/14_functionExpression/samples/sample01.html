@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample 01</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function ask(question, yes, no){
+      if(confirm(question)){
+        yes();
+      }else{
+        no();
+      }
+    }
+    function showYes(){
+      alert('Вы нажали Yes');
+    }
+    function showNo(){
+      alert('Вы нажали No');
+    }
+    
+  </script>
+</head>
+<body>
+  <button onclick="ask('Вы согласны',showYes,showNo)">ask</button>
+</body>
+</html>

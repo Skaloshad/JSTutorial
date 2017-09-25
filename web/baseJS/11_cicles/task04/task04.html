@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Натуральное число, большее 1, называется простым, если оно ни на 
+что не делится, кроме себя и 1.
+
+Другими словами, n>1 – простое, если при делении на любое число 
+от 2 до n-1 есть остаток.
+
+Создайте код, который выводит все простые числа из интервала 
+от 2 до 10. Результат должен быть: 2,3,5,7.
+
+P.S. Код также должен легко модифицироваться для любых других интервалов.
+-->
+<html>
+<head>
+  <title>simple numbers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function simpleNum(num1, num2){
+ 
+      var nums = [];
+      
+      nextPrime : for(num1; num1<=num2 ;num1++){
+        if(num1 > 1){
+          
+          for(var i = 2; i < num1; i++){
+            if((num1 % i) == 0){
+              continue nextPrime;
+            }
+          }
+          nums.push(num1);
+          
+        }
+        
+      }
+      
+      alert(nums);
+      
+    }
+    
+  </script>
+</head>
+<body>
+  <button onclick="simpleNum(2, 100)">simpleNum</button>
+</body>
+</html>
