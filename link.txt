@@ -1,1 +1,1 @@
-https://learn.javascript.ru/named-function-expression
+https://learn.javascript.ru/data-structures

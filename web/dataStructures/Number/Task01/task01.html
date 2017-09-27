@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+Создайте страницу, которая предлагает ввести два числа и выводит их сумму.
+
+P.S. Есть «подводный камень» при работе с типами.
+-->
+<html>
+<head>
+  <title>summa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function sum(a, b) {
+      return a + b;
+    }
+    function getUInput() {
+      var a = +prompt('Введите первое число');
+      var b = +prompt('Введите второе число');
+      alert( sum(a, b) );
+    }
+  </script>
+</head>
+<body>
+  <button onclick="getUInput()">summ</button>
+</body>
+</html>

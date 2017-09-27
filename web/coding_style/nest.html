@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function nesting() {
+        var n = 5;
+        
+        for (var i = 0; i < 5; i++) {
+          if (n == 5){
+            n++;
+          }
+        }
+        
+        for (var i = 0; i < 5; i++) {
+          if (n != 5) continue;
+          n++;
+        }
+      }
+      
+      function showPrimesOld(n) {
+        var nums = [];
+        
+        nextPrime: for (var i = 2; i < n; i++){
+          for (var j = 2; j < i; j++){
+            if (i % j == 0) continue nextPrime;
+          }
+          nums.push(i);
+        }
+        
+        alert(nums);
+      }
+      
+      function showPrimes(n) {
+        var nums = [];
+        
+        for (var i = 2; i < n; i++){
+          if (isPrime(i)){
+            nums.push(i);
+          }
+        }
+        
+        alert(nums);
+      }
+      
+      function isPrime(n) {
+        for (var i = 2; i < n; i++){
+          if (n % i == 0) return false;
+        }
+        return true;
+      }
+      
+    </script>
+  </head>
+  <body>
+    <button onclick="showPrimesOld(100)">showPrimesOld</button>
+    <button onclick="showPrimes(100)">showPrimes</button>
+    <button onclick="alert( isPrime(5) )">test isPrime</button>
+  </body>
+</html>

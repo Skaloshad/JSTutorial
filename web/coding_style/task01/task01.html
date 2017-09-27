@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+/////Сделать pow по спецификации
+
+Исправьте код функции pow, чтобы тесты проходили.
+
+Для этого ниже в задаче вы найдёте ссылку на песочницу.
+
+Она содержит HTML с тестами. Обратите внимание, что HTML-страница в 
+ней короче той, что обсуждалась в статье Автоматические тесты при 
+помощи chai и mocha. Это потому что библиотеки Chai, Mocha и Sinon 
+объединены в один файл:
+
+<script src="https://js.cx/test/libs.js"></script>
+
+Этот файл содержит код библиотек, стили, настройки для них и запуск mocha.run 
+по окончании загрузки страницы. Если нет элемента с id="mocha", то результаты 
+выводятся в <body>.
+
+Сборка сделана исключительно для более компактного представления задач, 
+без рекомендаций использовать именно её в проектах.
+
+/* исправьте этот код */
+    function pow(x, n) {
+      var result = 1;
+      for (var i = 0; i < n; i++) {
+        result *= x;
+      }
+      return result;
+    }
+
+/////Добавьте тест к задаче
+
+Добавьте к предыдущей задаче тесты, которые будут проверять, что любое число, 
+кроме нуля, в нулевой степени равно 1, а ноль в нулевой степени даёт NaN 
+(это математически корректно, результат 0^0 не определён).
+
+При необходимости, исправьте саму функцию pow(), чтобы тесты проходили без 
+ошибок.
+-->
+<html>
+<head>
+  <title>TODO supply a title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://js.cx/test/libs.js"></script>
+  <script src="testPow.js"></script>
+</head>
+<body>
+  <script>
+    function pow(x, n) {
+      if (n < 0) return NaN;
+      if (Math.round(n) != n) return NaN;
+      if (n == 0 && x == 0) return NaN;
+      
+      var result = 1;
+      for (var i = 0; i < n; i++) {
+        result *= x;
+      }
+      return result;
+    }
+  </script>
+  
+  <div id="mocha"></div>
+</body>
+</html>
